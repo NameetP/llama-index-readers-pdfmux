@@ -1,0 +1,48 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "llama-index-readers-pdfmux"
+version = "0.1.0"
+description = "LlamaIndex reader for pdfmux -- self-healing PDF extraction for RAG pipelines"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+authors = [
+    { name = "Nameet Potnis" },
+]
+keywords = ["llama-index", "llamaindex", "pdf", "pdfmux", "reader", "rag", "document-loader"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Text Processing :: Markup :: Markdown",
+]
+dependencies = [
+    "pdfmux>=1.2.0",
+    "llama-index-core>=0.10.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "ruff>=0.1.0", "pytest-cov>=4.0"]
+
+[project.urls]
+Homepage = "https://pdfmux.com"
+Repository = "https://github.com/NameetP/llama-index-readers-pdfmux"
+Issues = "https://github.com/NameetP/llama-index-readers-pdfmux/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/llama_index_readers_pdfmux"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
