@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "LlamaIndex reader for pdfmux -- self-healing PDF extraction for RAG pipelines"
 readme = "README.md"
 license = "MIT"
-requires-python = ">=3.11"
+requires-python = ">=3.9"
 authors = [
     { name = "Nameet Potnis" },
 ]
@@ -44,5 +44,5 @@ packages = ["src/llama_index_readers_pdfmux"]
 testpaths = ["tests"]
 
 [tool.ruff]
-target-version = "py311"
+target-version = "py39"
 line-length = 100
