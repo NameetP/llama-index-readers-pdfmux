@@ -11,3 +11,14 @@ build/
 .mypy_cache/
 .venv/
 venv/
+
+# secrets
+.env
+.env.local
+.env.production
+*.pem
+*.key
+credentials
+credentials/
+secrets
+secrets/
